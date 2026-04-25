@@ -1,0 +1,80 @@
+@use '../base/index' as *
+
+.cards
+	&__item
+		padding: 44px 13px 19px
+		position: relative
+		@include flexReverseAxis
+		width: 32%
+		min-height: 480px
+		align-items: center
+		background: $cardItemBg
+		border-radius: 20px
+		@media (max-width: 991px)
+			width: 45%
+			padding: 32px
+		@media (max-width: 768px)
+			width: 65%
+		@media (max-width: 576px)
+			width: 80%
+		@media (max-width: 480px)
+			padding: 24px
+		@media (max-width: 425px)
+			width: 100%
+			min-height: 425px
+		&:first-child
+			&::after
+				@include after(-110px, -20px)
+				width: 229px
+				height: 112px
+				@include background('img/educational-portal/teams-img.png')
+				@media (max-width: 425px)
+					width: 200px
+					top: -105px
+					right: 0
+				@media (max-width: 375px)
+					width: 150px
+					top: -100px
+		&:nth-child(2)
+			.cards__menu
+				margin-top: 16px
+	&__top
+		display: grid
+		gap: 6px
+	&__title
+		font-size: 20px
+		text-align: center
+		@media (max-width: 480px)
+			font-size: 18px
+	&__text
+		font-size: 14px
+		text-align: center
+		br
+			@media (max-width: 991px)
+				display: none
+	&__center
+		flex-grow: 1
+	&__description, &__bottom
+		@include flexReverseAxis
+		align-items: center
+		font-size: 14px
+	&__menu
+		display: grid
+		gap: 15px
+		margin-top: 36px
+		padding-left: 36px
+	&__list
+		position: relative
+		min-height: 26px
+		@include flexVerticalCenter
+		&::before
+			width: 36px
+			height: 36px
+			@include before(-5px, -45px)
+			@include background('icons/educational-portal/teams-list-icon.png')
+	&__bottom
+		a
+			&:last-child
+				font-size: 14px
+				text-align: center
+				text-decoration: underline

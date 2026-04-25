@@ -1,0 +1,31 @@
+@use 'base/index' as *
+
+.title
+	text-align: center
+	font-weight: 700
+	font-size: 35px
+	text-transform: uppercase
+	@media (max-width: 768px)
+		font-size: 30px
+	@media (max-width: 676px)
+		font-size: 26px
+	@media (max-width: 425px)
+		font-size: 22px
+	@media (max-width: 375px)
+		font-size: 20px
+	&_main
+		text-align: left
+		@media (max-width: 768px)
+			margin-top: 48px
+		@media (max-width: 576px)
+			margin-top: 32px
+	&_welcome
+		margin-top: 60px
+		@media (max-width: 425px)
+			margin-top: 16px
+	&_department
+		margin-top: 57px
+		@media (max-width: 768px)
+			margin-top: 48px
+		@media (max-width: 576px)
+			margin-top: 32px

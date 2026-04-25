@@ -1,0 +1,64 @@
+@use 'base/index' as *
+
+.department
+	padding-top: 95px
+	@media (max-width: 991px)
+		padding-top: 64px
+	@media (max-width: 425px)
+		padding-top: 32px
+	&__wrapper
+		margin-top: 36px
+		display: grid
+		gap: 36px
+	&__item
+		@include flexVerticalCenter
+		margin-left: 150px
+		@media (max-width: 1100px)
+			margin-left: 100px
+		@media (max-width: 991px)
+			margin-left: 64px
+		@media (max-width: 768px)
+			margin-left: 0
+		@media (max-width: 576px)
+			flex-direction: column
+			gap: 32px
+	&__img
+		flex-shrink: 0
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		box-shadow: 5px 3px 9px 0 $mainShadow
+		@media (max-width: 425px)
+			width: 120px
+			height: 120px
+		@media (max-width: 375px)
+			width: 100px
+			height: 100px
+	&__description
+		margin-left: 80px
+		@media (max-width: 768px)
+			margin-left: 60px
+		@media (max-width: 676px)
+			margin-left: 40px
+		@media (max-width: 576px)
+			margin-left: 0
+			text-align: center
+	&__name
+		font-size: 25px
+		@media (max-width: 768px)
+			font-size: 24px
+		@media (max-width: 676px)
+			font-size: 20px
+	&__text
+		font-size: 23px
+		margin-top: 10px
+		@media (max-width: 768px)
+			font-size: 22px
+		@media (max-width: 676px)
+			font-size: 20px
+		@media (max-width: 480px)
+			font-size: 20px
+		@media (max-width: 425px)
+			font-size: 18px
+		@media (max-width: 375px)
+			font-size: 16px

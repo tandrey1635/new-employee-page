@@ -1,0 +1,100 @@
+@use 'base/index' as *
+
+.work
+	padding-top: 85px
+	@media (max-width: 991px)
+		padding-top: 64px
+	@media (max-width: 425px)
+		padding-top: 32px
+	&__wrapper
+		margin-top: 45px
+		display: grid
+		grid-template-columns: repeat(4, 268px)
+		gap: 52px
+		@media (max-width: 1300px)
+			gap: 32px
+		@media (max-width: 1200px)
+			@include flexReverseAxis
+			align-items: center
+		@media (max-width: 425px)
+			margin-top: 32px
+	&__item
+		@include flexReverseAxis
+		justify-content: space-between
+		padding: 25px
+		padding-bottom: 34px
+		background: $workBg
+		min-height: 340px
+		border-radius: 50px
+		@media (max-width: 1200px)
+			width: 50%
+			margin-right: 0!important
+			flex-direction: column!important
+			gap: 32px
+		@media (max-width: 991px)
+			width: 65%
+			min-height: auto
+			padding: 25px!important
+		@media (max-width: 768px)
+			width: 80%
+		@media (max-width: 576px)
+			width: 100%
+			border-radius: 30px
+		@media (max-width: 425px)
+			border-radius: 20px
+		@media (max-width: 375px)
+			gap: 16px
+		&:nth-child(3)
+			@include background('img/work/work-bg.png')
+			grid-column: span 2
+			margin-right: 32px
+			@media (max-width: 1200px)
+				display: none
+		&:last-child
+			flex-direction: row
+			@include flexHorisontalCenter(space-between)
+			padding: 25px 52px
+			background: $workSecondBg
+			grid-column: span 3
+			margin-right: 32px
+			.work__info
+				width: 538px
+				@media (max-width: 1200px)
+					width: 100%
+			.work__img
+				width: 163px
+				height: 238px
+				@media (max-width: 425px)
+					width: 120px
+					height: 220px
+				@media (max-width: 375px)
+					width: 100px
+					height: 200px
+	&__title, &__text
+		font-size: 22px
+		@media (max-width: 1200px)
+			text-align: center
+		@media (max-width: 480px)
+			font-size: 20px
+		@media (max-width: 375px)
+			font-size: 18px
+		br
+			@media (max-width: 1200px)
+				display: none
+	&__text
+		margin-top: 13px
+		@media (max-width: 425px)
+			font-size: 18px
+		@media (max-width: 375px)
+			font-size: 16px
+	&__img
+		margin: 0 auto
+		width: 150px
+		height: 150px
+		filter: drop-shadow(5px 3px 9px $defaultShadow)
+		@media (max-width: 425px)
+			width: 120px
+			height: 120px
+		@media (max-width: 375px)
+			width: 100px
+			height: 100px

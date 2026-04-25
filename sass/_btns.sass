@@ -1,0 +1,63 @@
+@use 'base/index' as *
+
+.btn
+	padding: 16px
+	@include flexCenter
+	width: 425px
+	border-radius: 30px
+	min-height: 100px
+	font-weight: 700
+	font-size: 30px
+	text-transform: uppercase
+	color: $mainBtnColor
+	background: $mainBtnBg
+	box-shadow: 5px 3px 9px 0 $mainShadow
+	text-align: center
+	&:hover
+		background: $secondBtnBg
+		color: $secondBtnColor
+	@media (max-width: 480px)
+		padding: 12px
+		min-height: 80px
+		font-size: 25px!important
+	@media (max-width: 425px)
+		width: 100%
+		min-height: 60px
+		font-size: 20px!important
+		border-radius: 20px!important
+	@media (max-width: 375px)
+		min-height: 50px!important
+		font-size: 18px!important
+	&_map
+		width: 394px
+		@media (max-width: 576px)
+			padding: 12px
+			min-height: 60px
+			font-size: 26px
+	&_rules
+		width: 501px
+		min-height: 70px
+		font-size: 23px
+		border-radius: 20px
+		@media (max-width: 991px)
+			margin: 0 auto
+		@media (max-width: 576px)
+			width: 100%
+			font-size: 22px
+		@media (max-width: 425px)
+			font-size: 18px!important
+		@media (max-width: 375px)
+			font-size: 16px!important
+	&_start, &_portal
+		width: 100%
+	&_portal
+		@media (max-width: 1024px)
+			font-size: 28px
+		@media (max-width: 991px)
+			font-size: 30px
+	&_instruction
+		min-height: 70px
+		@media (max-width: 991px)
+			margin: 0 auto
+		@media (max-width: 480px)
+			width: 95%

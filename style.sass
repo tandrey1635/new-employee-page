@@ -1,0 +1,58 @@
+@use 'sass/base/reset'
+@use 'sass/base/index' as *
+
+
+@use 'sass/titles'
+@use 'sass/btns'
+
+
+@use 'sass/burger-menu'
+@use 'sass/header-mobile'
+@use 'sass/welcome'
+@use 'sass/department'
+@use 'sass/steps'
+@use 'sass/programs'
+@use 'sass/contacts'
+@use 'sass/accordeon'
+@use 'sass/map'
+@use 'sass/organisations'
+@use 'sass/rules'
+@use 'sass/work'
+@use 'sass/dress-code'
+@use 'sass/salary'
+@use 'sass/corporate'
+@use 'sass/footer'
+@use 'sass/educational-portal/start'
+@use 'sass/educational-portal/portal'
+@use 'sass/educational-portal/teams'
+@use 'sass/educational-portal/cards'
+
+
+html,body
+	scroll-behavior: smooth
+
+
+body
+	color: $mainColor
+	font-family: $mainFont
+	&.overflow
+		overflow: hidden
+
+section
+	min-height: 300px
+
+
+h1,h2,h3,h4,h5,h6
+	font-family: $secondFont
+
+.container
+	max-width: 1222px
+	padding: 0 15px
+	margin: 0 auto
+	&_main
+		max-width: 1262px
+		min-height: auto
+	&_map
+		max-width: 1400px
+	&_educational-portal
+		max-width: 1320px

@@ -1,0 +1,45 @@
+@use '../base/index' as *
+
+.start
+	padding-top: 60px
+	&__wrapper
+		@include flexHorisontalCenter(space-between)
+		@media (max-width: 991px)
+			flex-direction: column
+			align-items: center
+			gap: 64px
+		@media (max-width: 425px)
+			gap: 32px
+	&__left
+		width: 406px
+		height: 560px
+		@media (max-width: 768px)
+			width: auto
+			height: 450px
+		@media (max-width: 425px)
+			height: 400px
+		@media (max-width: 375px)
+			height: 350px
+	&__right
+		width: 52%
+		@include flexReverseAxis
+		gap: 26px
+		@media (max-width: 991px)
+			width: 65%
+		@media (max-width: 768px)
+			width: 80%
+		@media (max-width: 576px)
+			width: 100%
+	&__text
+		font-size: 15px
+		color: $defaultColor
+		br
+			@media (max-width: 1400px)
+				display: none
+	&__block__btns
+		margin-top: 46px
+		display: grid
+		gap: 46px
+		@media (max-width: 425px)
+			margin-top: 32px
+			gap: 32px

@@ -1,0 +1,195 @@
+@use 'base/index' as *
+
+.rules
+	padding-top: 62px
+	position: relative
+	@media (max-width: 425px)
+		padding-top: 32px
+	&__wrapper
+		margin-top: 51px
+		display: grid
+		gap: 54px
+		@media (max-width: 425px)
+			margin-top: 32px
+			gap: 32px
+	&__item
+		@include flexHorisontalCenter(space-between)
+		padding: 29px 57px
+		background: $rulesBg
+		border-radius: 50px
+		min-height: 353px
+		@media (max-width: 1200px)
+			padding: 32px
+		@media (max-width: 991px)
+			flex-direction: column
+			align-items: center
+			gap: 32px
+		@media (max-width: 768px)
+			min-height: auto
+		@media (max-width: 576px)
+			border-radius: 30px
+		@media (max-width: 425px)
+			border-radius: 20px
+			padding: 25px
+		@media (max-width: 375px)
+			gap: 16px
+	&__info
+		width: 661px
+		@media (max-width: 1200px)
+			width: 60%
+		@media (max-width: 991px)
+			width: 100%
+		br
+			@media (max-width: 1200px)
+				display: none
+	&__img
+		width: 280px
+		height: 280px
+		@media (max-width: 768px)
+			width: 250px
+			height: 250px
+		@media (max-width: 576px)
+			width: 200px
+			height: 200px
+		@media (max-width: 425px)
+			width: 150px
+			height: 150px
+		@media (max-width: 375px)
+			width: 120px
+			height: 120px
+	&__title
+		font-size: 30px
+		@media (max-width: 991px)
+			text-align: center
+		@media (max-width: 768px)
+			font-size: 28px
+		@media (max-width: 676px)
+			font-size: 24px
+		@media (max-width: 480px)
+			font-size: 22px
+		@media (max-width: 425px)
+			font-size: 20px
+		@media (max-width: 375px)
+			font-size: 18px
+	&__text
+		margin-top: 10px
+		font-size: 25px
+		@media (max-width: 991px)
+			text-align: center
+		@media (max-width: 676px)
+			font-size: 22px
+		@media (max-width: 480px)
+			font-size: 20px
+		@media (max-width: 425px)
+			font-size: 18px
+		@media (max-width: 375px)
+			font-size: 16px
+	&__block__btn
+		margin-top: 36px
+	&__modal
+		padding: 23px
+		padding-left: 27px
+		@include absolute(-20vh, 50%)
+		transform: translateX(-50%)
+		border-radius: 30px
+		width: 550px
+		min-height: 750px
+		background: $secondBg
+		box-shadow: 6px 6px 20px 0 $mainShadow
+		opacity: 0
+		pointer-events: none
+		transition: .3s all
+		@media (max-width: 576px)
+			width: 95%
+			min-height: auto
+			height: 600px
+			overflow-y: scroll
+		@media (max-width: 425px)
+			border-radius: 20px
+		&::-webkit-scrollbar
+			width: 0
+		&__title
+			font-size: 23px
+			text-transform: uppercase
+			@media (max-width: 576px)
+				width: 92%
+				font-size: 20px
+			@media (max-width: 480px)
+				font-size: 17px
+			@media (max-width: 425px)
+				font-size: 15px
+		&__subtitle
+			margin-top: 8px
+			font-size: 16px
+			@media (max-width: 480px)
+				font-size: 14px
+			@media (max-width: 425px)
+				font-size: 12px
+			br
+				@media (max-width: 576px)
+					display: none
+		&__wrapper
+			margin-top: 19px
+			display: grid
+			gap: 15px
+		&__item
+			position: relative
+			&:first-child
+				.rules__modal__menu__title
+					&::after
+						@include before(-5px, 54px)
+						width: 32px
+						height: 26px
+						@include background('icons/mail.png')
+			&:nth-child(2)
+				.rules__modal__menu__title
+					&::after
+						@include before(-8px, 45px)
+						width: 30px
+						height: 30px
+						@include background('icons/office.png')
+			&:nth-child(3)
+				.rules__modal__menu__title
+					&::after
+						@include before(-2px, 72px)
+						width: 23px
+						height: 26px
+						@include background('icons/message.png')
+			&:last-child
+				.rules__modal__menu__title
+					&::after
+						@include before(-3px, 116px)
+						width: 28px
+						height: 28px
+						@include background('icons/cross.png')
+		&__menu__title
+			font-size: 15px
+			@media (max-width: 425px)
+				font-size: 14px
+		&__menu
+			font-size: 14px
+			list-style: disc
+			padding-left: 30px
+		&__close
+			@include absoluteRight(20px, 16px)
+			width: 35px
+			height: 35px
+			border-radius: 50%
+			box-shadow: 6px 6px 20px 0 $mainShadow
+			cursor: pointer
+			@media (max-width: 425px)
+				top: 14px
+				right: 10px
+			&::before
+				@include flexCenter
+				@include before
+				@include background('icons/close.svg', 50%)
+				font-weight: 700
+				font-size: 25px
+				width: inherit
+				height: inherit
+.active-modal
+	top: 80px
+	opacity: 1
+	pointer-events: all
+	transition: .3s all
